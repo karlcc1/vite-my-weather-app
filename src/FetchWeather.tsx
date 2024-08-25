@@ -10,7 +10,7 @@ function DataFetching() {
     const [city_name, setCity_name] = useState()
     const [country, setCountry] = useState()
     const [icon, setIcon] = useState()
-    let icon_path = `http://openweathermap.org/img/wn/${icon}@4x.png`
+    let icon_path = `https://openweathermap.org/img/wn/${icon}@4x.png`
     const [short_desc, setShort_desc] = useState()
     const [long_desc, setLong_desc] = useState()
     const [weather_id, setWeather_id] = useState()
@@ -50,7 +50,7 @@ function DataFetching() {
     }
 
     useEffect(() => {
-        axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${new_input}&appid=${appid}`)
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${new_input}&appid=${appid}`)
             .then(res => {
                 console.log(res.data)
                 setCity_name(res.data.name)

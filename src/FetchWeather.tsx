@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import {useState, useEffect} from "react"
 import axios from 'axios'
 import './FetchWeather.css'
 import windImage from './wind.png'
@@ -65,7 +65,7 @@ function DataFetching() {
                 setWind_speed(res.data.wind.speed)
             })
             .catch(err => {
-                console.error()
+                console.error(err)
             })
     }, [new_input])
 
